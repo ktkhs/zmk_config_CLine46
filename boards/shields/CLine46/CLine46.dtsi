@@ -6,7 +6,6 @@
 / {
     chosen {
         zmk,physical-layout = &cline46_physical_layout;
-        zmk,battery = &vbatt;
     };
 
     cline46_physical_layout: cline46_physical_layout {
@@ -58,7 +57,7 @@
 
             , <&key_physical_attrs 100 100  100    300     0     0     0>
             , <&key_physical_attrs 100 100  200    300     0     0     0>
-            , <&key_physical_attrs 100 100  300    300     0     0     0>
+            , <&key_physical_attrs 150 100  300    300     0     0     0>
             , <&key_physical_attrs 100 100  400    300     0     0     0>
             , <&key_physical_attrs 100 100  500    300     0     0     0>
             , <&key_physical_attrs 100 100  600    300     0     0     0>
@@ -100,16 +99,11 @@
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-    };
-
-    vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 0>;
-        power-gpios; // unset
-        output-ohms = <470000>;
-        full-ohms = <(1000000 + 470000)>;
-        // For Ni-Mh 1U
-        mv-to-pct-thresholds = <1100 1150 1200 1220 1240 1260 1280 1300 1320 1350 1400>;
+        input-processors = 
+        //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;         //Y軸反転
+        //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
+        <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
+        <&zip_temp_layer 2 1000>;                            //オートマウスレイヤーの選択
     };
 };
 
