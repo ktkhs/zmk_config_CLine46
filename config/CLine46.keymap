@@ -78,10 +78,10 @@
 
         SCROLL {
             bindings = <
-&bt BT_CLR      &trans  &trans        &trans        &trans        &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR_ALL  &trans  &bt BT_SEL 4  &trans        &trans        &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &bt BT_SEL 0  &trans        &trans        &trans  &trans    &studio_unlock  &trans                  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                  &trans  &trans
             >;
         };
 
@@ -105,10 +105,10 @@
 
         layer_6 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB2  &lt 3 SPACE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans       &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                      &trans    &trans
             >;
         };
     };
